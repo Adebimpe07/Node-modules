@@ -1,7 +1,7 @@
 var arr = new Array();
 const fs = require("fs");
 const router = async function (req, res) {
-    // GET: /
+    // input name: /
     if (req.url === "/" && req.method === "GET") {
         res.writeHead(200, { "Content-Type": "text/html" });
         // send the data
@@ -11,17 +11,15 @@ const router = async function (req, res) {
         });
     }
 
-    //  GET: /api/blogs
+    //  GET: /api/my_name
     if (req.url === "/api/my_name" && req.method === "GET") {
-        // get the blogs.
-        //const name = await arr.map(x => x != null);
         // set the status code, and content-type
         res.writeHead(200, { "Content-Type": "application/json" });
         // send the data
         res.end(JSON.stringify(arr));
     }
 
-    //  POST: /api/name
+    //  POST: /api/save_name
     if (req.url === "/api/save_name" && req.method === "POST") {
         try {
             let body = "Name saved successfuly!!!";
@@ -35,7 +33,7 @@ const router = async function (req, res) {
         }
     }
 
-    //PUT: /api/blogs/:id
+    //PUT: /api/name/:id
     //   if (req.url.match(/\/api\/blogs\/([0-9]+)/) && req.method === "PUT") {
     //     try {
     //       // extract id from url
