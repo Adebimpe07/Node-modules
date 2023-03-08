@@ -3,7 +3,7 @@ var readline = require('readline');
 var fs = require('fs');
 
 var myInterface = readline.createInterface({
-  input: fs.createReadStream('../files/demofile.html')
+  input: fs.createReadStream('../demofile.html')
 });
 
 var lineno = 0;

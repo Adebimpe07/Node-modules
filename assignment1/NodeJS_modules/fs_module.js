@@ -3,13 +3,13 @@
 const fs = require('fs');
 
 // read a file
-fs.readFile('file.txt', 'utf8', (err, data) => {
+fs.readFile('../demofile.html', 'utf8', (err, data) => {
   if (err) throw err;
   console.log(data);
 });
 
 // write to a file
-fs.writeFile('file.txt', 'Hello, world!', (err) => {
+fs.writeFile('../demofile.html', 'Hello, world! This is new', (err) => {
   if (err) throw err;
   console.log('File saved!');
 });
