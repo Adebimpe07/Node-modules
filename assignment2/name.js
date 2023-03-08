@@ -26,8 +26,7 @@ const router = async function (req, res) {
         try {
             let body = "Name saved successfuly!!!";
 
-            arr.push(req.body.name);
-            arr.push(req.body.age);
+            arr.push(req.body.name)
             res.writeHead(200, { "Content-Type": "application/json" });
             //send response
             res.end(JSON.stringify(body));

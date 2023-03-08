@@ -4,10 +4,6 @@ var qs = require("querystring");
 
 const PORT = 8081;
 
-// mongoose.connect(process.env.MONGODB_URI).then(() => {
-//   console.log("Server successfully connected to database");
-// });
-
 const server = http.createServer((req, res) => {
     let data = "";
     req.on("data", (chunk) => {
